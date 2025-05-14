@@ -46,3 +46,18 @@ type ID = string | number;
 let userId: ID = "abc123";
 userId = 42; // also valid
 
+🔗 Intersection Type
+
+An intersection type means combining multiple types into one.
+
+type Name = { name: string };
+type Age = { age: number };
+
+type Person = Name & Age;
+
+const user: Person = {
+  name: "Tamanna",
+  age: 18
+};
+
+

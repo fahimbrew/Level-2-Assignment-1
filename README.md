@@ -36,3 +36,13 @@ Use type when you need more flexibility, like combining multiple types or creati
 💡 Tip:
 If you're describing a thing → use interface
 If you're combining things or making choices → use type
+
+🔀 Union Type
+
+A union type means a value can be one thing or another.
+
+type ID = string | number;
+
+let userId: ID = "abc123";
+userId = 42; // also valid
+

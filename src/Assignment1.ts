@@ -1,4 +1,3 @@
-// problem 1
 function formatString(input: string, toUpper?: boolean): string {
   if (toUpper === false) {
     return input.toLowerCase();
@@ -7,15 +6,11 @@ function formatString(input: string, toUpper?: boolean): string {
   }
 }
 
-// problem 2
-
 function filterByRating(
   items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] {
   return items.filter((item) => item.rating >= 4);
 }
-
-// problem 3
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   const result: T[] = [];
@@ -28,8 +23,6 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
 
   return result;
 }
-
-// problem 4
 
 class Vehicle {
   private make: string;
@@ -54,8 +47,6 @@ class Car extends Vehicle {
   }
 }
 
-// problem 5
-
 function processValue(value: string | number): number {
   if (typeof value === "string") {
     return value.length;
@@ -63,8 +54,6 @@ function processValue(value: string | number): number {
     return value * 2;
   }
 }
-
-// problem 6
 
 interface Product {
   name: string;
@@ -85,8 +74,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
   return mostExpensive;
 }
 
-// problem 7
-
 enum Day {
   Monday,
   Tuesday,
@@ -103,4 +90,16 @@ function getDayType(day: Day): string {
   } else {
     return "Weekday";
   }
+}
+
+async function squareAsync(n: number): Promise<number> {
+  if (n < 0) {
+    throw new Error("Negative number is not allowed");
+  }
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(n * n);
+    }, 1000);
+  });
 }
